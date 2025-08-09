@@ -1,0 +1,141 @@
+body {
+    font-family: 'Playfair Display', serif; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f8f8, #e7e7e7);
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to right, #b993d6, #8ca6db); 
+    color: #fff;
+    padding: 50px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.3em;
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+main {
+    padding: 50px 20px;
+}
+
+.wonders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wonder {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.wonder:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wonder img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #b993d6; 
+}
+
+.wonder h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #5e5e5e;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+#details {
+    margin: 30px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    text-align: left;
+    display: none; 
+}
+
+#details h2 {
+    font-size: 2em;
+    color: #8a2be2; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b993d6;
+    padding-bottom: 5px;
+}
+
+#details p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+#details button {
+    padding: 15px 30px;
+    background: #b993d6;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(185, 147, 214, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#details button:hover {
+    background: #8ca6db;
+    box-shadow: 0 15px 30px rgba(140, 166, 219, 0.5);
+    transform: translateY(-3px);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .wonders {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .wonder {
+        width: 100%;
+    }
+
+    #details {
+        width: 90%;
+    }
+}
